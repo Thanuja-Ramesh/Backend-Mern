@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+        console.log("Task-3 Create a Promise that calculates a 10% discount");
+        
+        let price = 5000;
+
+let discount = new Promise((resolve, reject) => {
+    if (price > 0) {
+        let discountedPrice = price - (price * 10 / 100);
+        resolve(discountedPrice);
+    } else {
+        reject("Invalid Price");
+    }
+});
+
+
+ discount.then((result) => {
+        console.log("Discounted Price:", result);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+    .finally(() => {
+        console.log("Price Calculation Completed");
+    });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ES6+ Features - And Working</title>
+</head>
+<body>
+    <script>
+        //Task-1
+        console.log("Task-1 User Profile Message");
+        
+        const name = "Thanuja Ramesh"
+        const age = 24
+        const city = "Gudiyatham"
+        const role = "Mern Developer"
+
+        const message=`Hello I am ${name}
+I am ${age} years old
+I live in ${city}
+I am a ${role}`
+        console.log(message);
+
+        //Task-2
+        console.log("");
+        
+        console.log("Task-2 Calculator");
+        const calculator = (a,b)=>{
+            console.log("Addition:", a+b);
+            console.log("Subtraction:", a-b);
+            console.log("Multiplication:",a*b);
+            console.log("Divide:",a/b);
+            
+            
+            
+            return a+b
+            
+        }
+        calculator(20,10)
+        
+        
+        //Task-3
+        console.log("");
+        console.log("Task-3 User Greeting");
+         const greetUser = (name,role = "Developer")=>{
+            console.log(`Hello ${name}, I'm a ${role}`);
+            
+
+         }
+         greetUser("Thanuja Ramesh")
+
+        //Task-4
+         console.log("");
+         console.log("Task-4 Student Profile");
+         const student={Name:"Hima",Age:"22",Course:"Mern",City:"Gudiyatham"}
+         const user=(student)=>{
+            const {Name,Age,Course,City}=student
+            console.log(`Name: ${Name}
+Age: ${Age}
+Course: ${Course}
+City: ${City}`)
+
+         }
+         user(student)
+
+         //Task-5
+         console.log("");
+         console.log("Task-5 Product Price Calculator")
+         const product ={name:"Laptop",
+                         price:60000,
+                         quantity:2
+         }
+         const info=(product)=>{
+            const {name,price,quantity} =product
+            const total=price*quantity
+            console.log("Laptop");
+            
+            console.log(`Price:${product.price}
+Quantity:${product.quantity}
+Total:${total}`);
+            
+         }
+         info(product)
+
+         //Task-6
+         console.log("");
+         console.log("Task-6 Add more product");
+         const product1 = ["Laptop","Mouse"]
+         const product2 = ["Keyboard","Monitor"]
+         const copy =[...product1,...product2]
+         console.log(copy);
+
+         //Task-7
+         console.log("");
+         console.log("Task-7 Copy and update user");
+         const userInfo = {name:"Hima", age:24, role:"Developer"
+        }
+        const updateUser={...userInfo,age:26,role:"Senior Developer"}
+        console.log(`Original:${userInfo.name} 
+        ${userInfo.age}
+        ${userInfo.role}
+
+Updated:
+        ${updateUser.name} 
+        ${updateUser.age}
+        ${updateUser.role}`)
+
+        //Task-8
+        console.log("")
+        console.log("Task-8 Shopping Cart Total");
+        const calculateTotal=(...prices)=>{
+        let total=0
+        for(let i=0; i<prices.length;i++){
+            total=total+prices[i]
+
+        }
+        console.log("Total:",total);
+       }
+        calculateTotal(100,200,300)
+        calculateTotal(50,100)
+        calculateTotal(100,200,300,400)
+
+        //Task-9
+        console.log("");
+        console.log("Task-9 User Details with Default values");
+        
+const createUser = (name = "Guest", age = 18, city = "Unknown") => {
+    console.log(`${name}
+${age}
+${city}`);
+};
+
+createUser("Thara", 24, "Chennai");
+createUser("Thara");
+
+//Task-10
+ console.log("");
+console.log("Task-10 Safe User Profile");
+
+
+const use = {
+    name: "Bala",
+    age: 25
+};
+
+const getCity = () => {
+    return use.address?.city ?? "Unknown City";
+};
+
+console.log(getCity());
+
+
+user.address = {
+    city: "Chennai"
+};
+
+console.log(getCity());
+
+//Task-11
+
+
+console.log("");
+console.log("Task-11 User search result");
+
+const users = [
+    { name: "Bala", role: "Developer" },
+    { name: "Arun", role: "Designer" },
+    { name: "Kumar", role: "Tester" }
+];
+
+for (const user of users) {
+    const { name, role } = user;
+    console.log(`${name} - ${role}`);
+}
+
+
+
+
+
+        
+        
+        
+
+        
+    
+
+        
+         
+         
+         
+         
+         
+         
+         
+         
+        
+        
+        
+        
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods-Function</title>
+</head>
+<body>
+    <script>
+        //Task-1
+        console.log("Task-1 Greater than 35");
+        
+        const arr=[10,20,30,40]
+        const total=arr.some((arr)=>arr>35)
+        console.log(total);
+
+       //Task-2
+        console.log("");
+        console.log("Task-2 Marks scored above 50 using every");
+        const student=[{Name:"Ramesh", Marks:98},
+                    {Name:"Hima", Marks:88},
+                    {Name:"Thara", Marks:49}
+        ]
+       
+        const aboveMark=student.every((student)=>student.Marks>50)
+        console.log(aboveMark);
+
+        //Task-3
+        console.log("");
+        console.log("Task-3 Admin Existing using includes");
+        const office=["Admin","Developer","HR"]
+        const currentValue="Admin"
+        const check=office.includes(currentValue)
+        console.log(check);
+
+        //Task-4
+        console.log("");
+        console.log("Task-4 Calculate total salary of five employees using reduce");
+        const employee=[{Name:"Thanuja",Salary:500000},
+                         {Name:"Monica",Salary:100000},
+                         {Name:"Suva",Salary:300000},
+                         {Name:"Diya",Salary:50000},
+                         {Name:"Prema",Salary:45000}
+
+        ]
+        const totals=employee.reduce((sum,item)=>{
+            return sum + item.Salary
+
+        },0)
+        console.log(totals);
+
+        //Task-5
+        console.log("");
+        console.log("Task-5 Shopping cart total using price*quantity");
+        const product=[{Name:"Laptop",Price:50000,Quantity:2},
+                       {Name:"Keyboard",Price:10000,Quantity:1},
+                       {Name:"Mouse",Price:5000,Quantity:2}
+
+        ]
+        const tot=product.reduce((sum,item)=>{
+            return sum + item.Price*item.Quantity
+
+        },0)
+        console.log(tot);
+
+        //Task-6
+        console.log("");
+        console.log("Task-6 More than 30000 using filter");
+        const employees=[{name:"Ramesh",salary:400000},
+                         {name:"Ravi", salary:32000},
+                         {name:"Raj",salary:15000}
+
+        ]
+        const moreThan=employees.filter((employees)=>employees.salary>30000)
+        console.log(moreThan);
+
+        //Task-7
+        console.log("");
+        console.log("Task-7 Find student id using find()");
+        const students=[{ID:26 , name:"Hima"},
+                        {ID:24 , name:"Thara"}
+
+        ]
+        const find=students.find((students)=>students.ID===26)
+        console.log(find);
+
+        //Task-8
+        console.log("");
+        console.log("Task-8 Get the index of a product by Id using findIndex()");
+        const pro=[{ID:11, Product:"Laptop"},
+                  {ID:27, Product:"Keyboard"},
+                   {ID:26, Product:"Mouse"},
+                   {ID:24, Product:"Speaker"}]
+      const findIndex=pro.findIndex((pro)=>pro.ID===24)
+      console.log(findIndex);
+    
+      //Task-9
+      console.log("");
+      console.log("Task-9 Low to High using sort");
+      const prices=[11,27,26,24,10]
+      const ascending=[...prices].sort((a,b)=>a-b)
+      console.log(ascending);
+
+      //Task-10
+      console.log("");
+      console.log("Task-10 using Map");
+      const employe=[{name:"Ram",role:"IT"},
+                     {name:"Ravi",role:"HR"}
+      ]
+      const names=employe.map((employe)=>employe.name)
+      console.log(names);
+      
+      
+      
+
+      
+      
+      
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+               
+        
+
+
+    </script>
+    
+</body>
+</html>

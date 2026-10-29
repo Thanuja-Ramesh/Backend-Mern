@@ -1,0 +1,25 @@
+<script>
+    //Task-2
+
+console.log("Task-2 Login Validation");
+let username = "admin";
+let password = "1234";
+
+let login = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (username === "admin" && password === "1234") {
+            resolve("Login Successful");
+        } else {
+            reject("Invalid Credentials");
+        }
+    }, 2000);
+});
+
+
+    login.then((resolve) => {
+        console.log(resolve);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+</script>
