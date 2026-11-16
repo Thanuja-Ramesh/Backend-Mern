@@ -1,10 +1,10 @@
-import ObjectRendering from "../pages/ObjectRendering"
+
 
 
 const NavBar = () => {
   return (
    <>
-   
+ 
    </>
   )
 }
